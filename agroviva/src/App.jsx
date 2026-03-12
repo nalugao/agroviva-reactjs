@@ -6,7 +6,7 @@ import Layout from "./components/Layout"
 import Home from "./pages/Home"
 import ImpactoSocial from "./pages/ImpactoSocial"
 import Beneficios from "./pages/Beneficios"
-import FaleConosco from "./pages/FaleConosco"
+import FaleConosco from "./pages/FaleConosco/FaleConosco";
 
 
 function App() {

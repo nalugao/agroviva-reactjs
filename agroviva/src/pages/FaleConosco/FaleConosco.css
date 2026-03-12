@@ -1,0 +1,177 @@
+/* FUNDO GERAL */
+body {
+  background: linear-gradient(180deg, #ffffff 0%, #f1f8e9 100%);
+  background-attachment: fixed;
+  color: #333;
+}
+
+/* WIDGET ACESSIBILIDADE */
+#userwayAccessibilityIcon,
+.userway_buttons_wrapper,
+.userway-widget,
+.userway-accessibility-widget {
+  position: fixed !important;
+  right: 10px !important;
+  bottom: 20px !important;
+  top: auto !important;
+  left: auto !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+}
+
+@media (max-width: 768px) {
+  #userwayAccessibilityIcon,
+  .userway_buttons_wrapper,
+  .userway-widget,
+  .userway-accessibility-widget {
+    right: 10px !important;
+    bottom: 10px !important;
+  }
+}
+
+/* AREA PRINCIPAL DA PÁGINA */
+
+main{
+  min-height:80vh;
+}
+
+/* PÁGINA FALE CONOSCO */
+
+.fale-conosco {
+  padding-top: 120px;
+  padding-bottom: 60px;
+  min-height: 80vh;
+}
+
+/* TÍTULO */
+
+.titulo{
+  font-size: clamp(28px, 4vw + 8px, 50px);
+  text-align: center;
+  font-weight: 800;
+}
+
+/* SUBTÍTULO */
+
+.subtitulo{
+  text-align: center;
+  font-size: clamp(14px, 1.4vw + 8px, 26px);
+  margin-bottom: 25px;
+}
+
+/* COLUNA ESQUERDA */
+
+.fale{
+  margin-top: 40px;
+}
+
+/* FORMULÁRIO */
+
+.form{
+  margin-top: 40px;
+}
+
+.card{
+  border-radius: 15px;
+  border: none;
+}
+
+.card h4{
+  text-align: center;
+}
+
+/* ACCORDION FAQ */
+
+.accordion-item {
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.accordion-button {
+  border-radius: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #006330;
+  background-color: #e9f5e9;
+  box-shadow: none;
+}
+
+.accordion-button::after {
+  filter: invert(42%) sepia(91%) saturate(2776%) hue-rotate(98deg) brightness(80%) contrast(120%);
+}
+
+/* PARÁGRAFOS */
+
+p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* BOTÃO ENVIAR */
+
+.btn-success{
+  background-color:#006330;
+  border:none;
+  font-weight:700;
+  padding:12px;
+  transition:0.3s;
+}
+
+.btn-success:hover{
+  background-color:#90c940;
+}
+
+/* CARDS */
+
+.cards-container {
+  margin-top: 120px !important; 
+  background: linear-gradient(180deg, #ffffff 0%, #f1f8e9 100%) !important;
+}
+
+/* ANIMAÇÃO DE SUCESSO */
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; }
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width:768px){
+
+  .fale-conosco{
+    padding-top:100px;
+  }
+
+  .fale{
+    margin-top:20px;
+  }
+
+  .form{
+    margin-top:30px;
+  }
+
+  .titulo{
+    font-size:32px;
+  }
+
+}
