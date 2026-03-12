@@ -1,0 +1,159 @@
+.iphone_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem 1rem 1rem 1rem;
+  min-height: auto;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .iphone_section {
+    padding: 1.5rem 1rem 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .iphone_section {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    margin-bottom: 0.5rem;
+    height: 450px;
+  }
+}
+
+.iphone {
+  position: relative;
+  width: 100%;
+  max-width: 330px;
+  height: 700px;
+  margin: 0 auto;
+  z-index: 1;
+  transform-origin: center center;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .iphone {
+    transform: scale(0.85);
+  }
+}
+
+@media (max-width: 480px) {
+  .iphone {
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 360px) {
+  .iphone {
+    transform: scale(0.6);
+  }
+}
+
+.iphone_border {
+  height: 700px;
+  width: 330px;
+  border: solid 5px gray;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e8f5e9;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.iphone_intern_border {
+  height: 690px;
+  width: 320px;
+  border: solid 8px #000;
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  background: #f1f8e9;
+}
+
+
+.iphone_notch {
+  position: absolute;
+  top: 0;
+  height: 25px;
+  width: 170px;
+  background: #000;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  z-index: 10;
+}
+
+.sound_notch {
+  position: absolute;
+  height: 5px;
+  width: 40px;
+  background: rgb(27, 26, 26);
+  border-radius: 10px;
+  top: 8px;
+  z-index: 11;
+}
+
+.left_button_1,
+.left_button_2,
+.left_button_3 {
+  position: absolute;
+  background: #000;
+  width: 3px;
+  left: -2px;
+  border-radius: 200px;
+}
+
+.left_button_1 {
+  height: 20px;
+  top: 15%;
+}
+
+.left_button_2 {
+  height: 60px;
+  top: 23%;
+}
+
+.left_button_3 {
+  height: 60px;
+  top: 35%;
+}
+
+.right_button {
+  position: absolute;
+  background: #000;
+  height: 80px;
+  width: 3px;
+  right: -2px;
+  top: 25%;
+  border-radius: 200px;
+}
+
+.title_iphone {
+  position: absolute;
+  top: 155px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #000;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+  letter-spacing: 0.5px;
+}
+
+.p_iphone {
+  position: relative;
+  top: 10%;
+  width: 150px;
+  left: 5%;
+}
+
+
+
+
+

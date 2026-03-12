@@ -1,0 +1,65 @@
+.card1,
+.card2,
+.card3 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 120px;
+  width: 280px;
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+  color: white;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(27, 94, 32, 0.3);
+  transition: all 0.3s ease;
+  border: 2px solid #558b2f;
+}
+
+.card1 {
+  top: 190px;
+}
+.card2 {
+  top: 330px;
+}
+.card3 {
+  top: 470px;
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover {
+  transform: translateX(3px);
+  box-shadow: 0 10px 25px rgba(27, 94, 32, 0.4);
+}
+
+.card-icon {
+  height: 70px;
+  width: 70px;
+  flex-shrink: 0;
+  margin-right: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.card-text {
+  font-weight: 600;
+  font-size: 0.92rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.logo {
+  position: absolute;
+  height: 150px;
+  top: 3%;
+}
+
+.icone {
+  position: relative;
+  left: -3%;
+  height: 90px;
+}

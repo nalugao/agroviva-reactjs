@@ -1,0 +1,52 @@
+.fale-button {
+  background: linear-gradient(135deg, #2e7d32 0%, #43a047 50%, #4caf50 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+  border: none;
+  text-decoration: none;
+
+  padding: 1.25rem 3rem;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 700;
+
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(46, 125, 50, 0.35);
+
+  transition: all 0.3s ease;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: white;
+
+  position: relative;
+  overflow: hidden;
+
+  display: inline-block;
+}
+
+.fale-button:hover {
+  box-shadow: 0 12px 35px rgba(46, 125, 50, 0.5);
+}
+
+.fale-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+@media (max-width: 480px) {
+  .fale-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+
