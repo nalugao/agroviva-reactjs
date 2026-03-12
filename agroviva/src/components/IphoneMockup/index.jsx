@@ -21,14 +21,14 @@ function IphoneMockup() {
 
               <CardImpacto
                 classe="card1"
-                imagem="/77.png"
+                imagem="77.png"
                 alt="77%"
                 texto="77% das propriedades rurais do Brasil são de agricultura familiar"
               />
 
               <CardImpacto
                 classe="card2"
-                imagem="/20.png"
+                imagem="20.png"
                 alt="20%"
                 texto="Menos de 20% têm acesso à tecnologia"
               />

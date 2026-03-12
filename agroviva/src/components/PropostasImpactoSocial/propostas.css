@@ -36,6 +36,7 @@
 
 .card {
   display: flex;
+  flex-direction: row;
   align-items: center;
 
   gap: 12px;
@@ -46,4 +47,8 @@
 
   font-size: clamp(1rem, 2vw, 1.15rem);
   font-weight: 600;
+}
+.card i {
+  flex-shrink: 0;         /* Impede que o ícone diminua de tamanho */
+  font-size: 1.2rem;      /* Ajuste o tamanho do check conforme desejar */
 }
