@@ -39,18 +39,25 @@
   position: relative;
   z-index: 1;
 }
+
+/* 🔥 CONTAINER COM EFEITO GLASS */
 .filtro-container {
   display: flex;
   justify-content: center;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  background: #e9f5ec;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+
   border-radius: 50px;
-  padding: 5px;
+  padding: 4px;
 }
+
+/* BOTÕES */
 .filtro-btn {
-  flex: 1; /* 🔥 ambos com mesmo tamanho */
+  flex: 1;
   border: none;
   border-radius: 50px;
   padding: 10px 0;
