@@ -103,4 +103,8 @@ O **AgroViva Web** é uma plataforma colaborativa que conecta agricultores famil
 - Design do fundo da página de benefícios
 - Design e lógica dos botões "Agricultor" e "Comunidade"
 - Inserção da logo da agroviva web como favcon do site
-- 
+
+###Jefferson Gomes
+- Estrutura de pastas do projeto
+- Navegação entre páginas usando React-Router
+- Design e lógica dos cards de benefícios do Agricultor e da Comunidade
