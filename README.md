@@ -6,7 +6,7 @@
 
 
 </div>
-
+??
 ---
 
 ## 📑 Índice
@@ -84,4 +84,8 @@ O **AgroViva Web** é uma plataforma colaborativa que conecta agricultores famil
 
 | [<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/eee2b54b-385c-4ae4-b63c-3ef608634e6b" />](https://github.com/Jeffergs) | [<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/7ca56d82-e940-4076-8689-80b23b0bde23" />](https://github.com/andrefxm) | [<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/389d55a5-42f3-4731-a9f8-882c6425b416" />](https://github.com/nalugao) | [<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/f99c1d0e-ee43-4ec6-a505-23f4ae5ea91a" />](https://github.com/GabrielSiSo) | [<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/49ebc889-5dde-4ddb-ac3f-7e80dc3da88f" />](https://github.com/Sophia-Coelho) | 
 |:---:|:---:|:---:|:---:|:---:|
+<<<<<<< HEAD
 | [![Jefferson Gomes](https://img.shields.io/badge/Jefferson_Gomes-24292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Jeffergs) | [![André Melo](https://img.shields.io/badge/André_Melo-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/andrefxm) | [![Natália Lugão](https://img.shields.io/badge/Natália_Lugão-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nalugao) | [![Gabriel Soares](https://img.shields.io/badge/Gabriel_Soares-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/GabrielSiSo) | [![Sophia Coelho]
+=======
+| [![Jefferson Gomes](https://img.shields.io/badge/Jefferson_Gomes-24292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Jeffergs) | [![André Melo](https://img.shields.io/badge/André_Melo-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/andrefxm) | [![Natália Lugão](https://img.shields.io/badge/Natália_Lugão-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nalugao) | [![Gabriel Soares](https://img.shields.io/badge/Gabriel_Soares-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/GabrielSiSo) | [![Sophia Coelho]
+>>>>>>> bca53dcd1fc6b26053d4815695c95cea7205f250
