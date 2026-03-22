@@ -32,10 +32,6 @@ O **AgroViva Web** é uma plataforma colaborativa que conecta agricultores famil
 
 ---
 
-## 🔄 Atualização em relaçao a agroviva web
-
----
-
 ## 💻 Tecnologias utilizadas
 -  ⚛️ React (biblioteca js) - Construção da interface, diminuir a quantidade de código html e aumentar a velocidade de carregamento da página
 - ⚡Vite - Ferramenta de build ultra-rápida para o ambiente de desenvolvimento.
