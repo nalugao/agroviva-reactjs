@@ -2,7 +2,7 @@
 
 <h1>🌱Agroviva web — Agricultura Local & Consumo Consciente</h1>
 
-<p>🌐 <strong>Site Oficial:</strong> <a href="https://agroviva.vercel.app/">https://agrowebviva.vercel.app/</a></p>
+<p>🌐 <strong>Site Oficial:</strong> <a href="https://agroviva.vercel.app/">https://agroviva.vercel.app/</a></p>
 
 
 </div>
