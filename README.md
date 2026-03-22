@@ -97,7 +97,7 @@ O **AgroViva Web** é uma plataforma colaborativa que conecta agricultores famil
 
 ### André Melo
 - Estrutura do fluxo de interação do usuário com o chatbot
-- Criação do menu de navegação (navbar)
+- Menu de navegação (navbar) do projeto
 
 ### Gabriel Soares
 - Design do fundo da página de benefícios
@@ -110,6 +110,11 @@ O **AgroViva Web** é uma plataforma colaborativa que conecta agricultores famil
 - Design e lógica dos cards de benefícios do Agricultor e da Comunidade
 
 ### Nathalia Lugao
-- Criação da página do chatbot
+- Página do chatbot
 - Ajustes na estrutura do projeto
-- Criação da página "Impacto Social"
+- Página "Impacto Social"
+
+### Sophia Coelho
+- Página "Fale conosco"
+- Rodapé (footer) do projeto
+
