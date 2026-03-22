@@ -2,7 +2,7 @@
 
 <h1>🌱Agroviva web — Agricultura Local & Consumo Consciente</h1>
 
-<p>🌐 <strong>Site Oficial:</strong> <a href="https://agrowebviva.vercel.app/">https://agrowebviva.vercel.app/</a></p>
+<p>🌐 <strong>Site Oficial:</strong> <a href="https://agroviva.vercel.app/">https://agrowebviva.vercel.app/</a></p>
 
 
 </div>
@@ -45,28 +45,21 @@ O **AgroViva Web** é uma plataforma colaborativa que conecta agricultores famil
 
 ## 📑 Páginas do projeto
 
-### [🏠 Página inicial](https://agrowebviva.vercel.app/) 
-<img width="1896" height="663" alt="image" src="https://github.com/user-attachments/assets/f4ff660f-c30a-4ae0-9921-2b12ef263c11" />
-<img width="1892" height="510" alt="image" src="https://github.com/user-attachments/assets/e0b9f05f-4908-4f39-bd3f-1c2c1fc18e1a" />
-<img width="1899" height="733" alt="image" src="https://github.com/user-attachments/assets/e1c82c72-fb31-42d1-89f2-025e508ec3c9" />
-<img width="1895" height="748" alt="image" src="https://github.com/user-attachments/assets/cc2f39b7-20f0-480a-9439-6f7c19a56dea" />
+### [🏠 Página inicial](https://agroviva.vercel.app/) 
 
-### [🌍 Impacto social](https://agrowebviva.vercel.app/Apresentacao.html) 
-<img width="1895" height="462" alt="image" src="https://github.com/user-attachments/assets/356b879f-3734-4f33-b613-959a04b6b836" />
-<img width="1891" height="805" alt="image" src="https://github.com/user-attachments/assets/fae30fef-5845-475c-869c-8fd362fd3a05" />
-<img width="1896" height="556" alt="image" src="https://github.com/user-attachments/assets/bcb3f3ca-d99d-4098-a62a-2af07d5199db" />
 
-### [👩‍🌾 Agricultor](https://agrowebviva.vercel.app/agricultor.html) 
-<img width="1896" height="874" alt="image" src="https://github.com/user-attachments/assets/c0d1cc8c-8990-42be-a0db-39cebe68f9fe" />
-<img width="1897" height="530" alt="image" src="https://github.com/user-attachments/assets/0ed2c214-a4f6-400a-b089-50dfb644799a" />
+### [🌍 Impacto social](https://agroviva.vercel.app/impacto) 
 
-### [🧑‍🤝‍🧑 Comunidade](https://agrowebviva.vercel.app/Comunidade.html) 
-<img width="1892" height="844" alt="image" src="https://github.com/user-attachments/assets/557d1854-03b7-4aa6-8520-cee34aefb684" />
-<img width="1895" height="748" alt="image" src="https://github.com/user-attachments/assets/cc2f39b7-20f0-480a-9439-6f7c19a56dea" />
 
-### [📞 Fale conosco](https://agrowebviva.vercel.app/FaleConosco.html) 
-<img width="1897" height="871" alt="image" src="https://github.com/user-attachments/assets/fb85d661-d781-4021-ad77-12339f5faa0c" />
-<img width="1895" height="748" alt="image" src="https://github.com/user-attachments/assets/cc2f39b7-20f0-480a-9439-6f7c19a56dea" />
+
+### [👩‍🌾 Benefícios](https://agroviva.vercel.app/beneficios) 
+
+
+### [🧑‍🤝‍🧑 Chatbot](https://agroviva.vercel.app/chatbot) 
+
+
+### [📞 Fale conosco](https://agroviva.vercel.app/fale) 
+
 
 ---
 
