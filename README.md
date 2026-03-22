@@ -95,5 +95,6 @@ O **AgroViva Web** é uma plataforma colaborativa que conecta agricultores famil
 >>>>>>> bca53dcd1fc6b26053d4815695c95cea7205f250
 
 
-###André Melo
+### André Melo
 - Fluxo de interação do usuário com o chatbot
+- Criação do menu de navegação (navbar)
