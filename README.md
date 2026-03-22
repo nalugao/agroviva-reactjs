@@ -6,7 +6,7 @@
 
 
 </div>
-??
+
 ---
 
 ## 📑 Índice
@@ -29,6 +29,10 @@ Ao mesmo tempo, a agricultura familiar, que representa 77% dos estabelecimentos 
 ## 🌐 Solução — Agroviva web
 
 O **AgroViva Web** é uma plataforma colaborativa que conecta agricultores familiares a em situação de vulnerabilidade alimentar, reduzindo desperdícios e facilitando o acesso a alimentos.
+
+---
+
+## 🔄 Atualização em relaçao a agroviva web
 
 ---
 
