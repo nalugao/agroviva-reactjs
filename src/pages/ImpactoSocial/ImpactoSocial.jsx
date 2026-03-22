@@ -1,5 +1,5 @@
 import HeaderImpactoSocial from "../../components/HeaderImpactoSocial";
-import ImpactoSocialPropostas from "../../components/PropostasImpactoSocial";
+import ImpactoSocialPropostas from "../../components/PropostasImpactoSocial/PropostasImpactoSocial";
 import IphoneMockup from "../../components/IphoneMockup";
 import "./impacto-social.css";
 

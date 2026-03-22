@@ -1,7 +1,7 @@
-import { BotaoFaleConosco } from "../BotaoFaleConosco";
+import { BotaoFaleConosco } from "../BotaoFaleConosco/BotaoFaleConosco";
 import "./propostas.css";
 
-export default function ImpactoSocialPropostas() {
+export default function PropostasImpactoSocial() {
 
   const propostas = [
     "Zero desperdício",

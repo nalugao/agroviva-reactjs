@@ -1,7 +1,7 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import './chatbotao.css';
 
-function ChatbotButton() {
+function ChatBotao() {
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -15,4 +15,4 @@ function ChatbotButton() {
     );
 }
 
-export default ChatbotButton;
+export default ChatBotao;

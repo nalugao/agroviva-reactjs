@@ -1,4 +1,4 @@
-import CardImpacto from '../CardImpacto';
+import CardImpacto from '../CardImpacto/CardImpacto';
 import './iphone-mockup.css'
 
 function IphoneMockup() {

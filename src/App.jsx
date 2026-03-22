@@ -3,12 +3,12 @@ import './App.css'
 
 import Layout from "./components/Layout"
 
-import Home from "./pages/Home"
-import ImpactoSocial from "./pages/ImpactoSocial"
-import Beneficios from "./pages/Beneficios"
-import Chatbot from "./pages/Chatbot";
+import Home from "./pages/Home/Home"
+import ImpactoSocial from "./pages/ImpactoSocial/ImpactoSocial"
+import Beneficios from "./pages/Beneficios/Beneficios"
+import Chatbot from "./pages/Chatbot/Chatbot";
 import FaleConosco from "./pages/FaleConosco/FaleConosco";
-import ChatbotButton from './components/ChatBotao';
+import ChatBotao from './components/ChatBotao/ChatBotao';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           <Route path="/fale" element={<FaleConosco />} />
         </Route>
       </Routes>
-      <ChatbotButton />
+      <ChatBotao />
     </BrowserRouter>
   );
 }

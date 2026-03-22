@@ -1,5 +1,5 @@
-import ChatMenssagem from "../ChatMenssagem";
-import ChatOpcoes from "../ChatOpcoes";
+import ChatMenssagem from "../ChatMenssagem/ChatMenssagem";
+import ChatOpcoes from "../ChatOpcoes/ChatOpcoes";
 
 function ChatJanela({ messages, onAction, messagesContainerRef }) {
 

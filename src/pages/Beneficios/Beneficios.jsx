@@ -1,4 +1,4 @@
-import CardBeneficio from "../../components/CardBeneficio";
+import CardBeneficio from "../../components/CardBeneficio/CardBeneficio";
 import { beneficiosAgroviva } from "../../data/beneficiosAgroviva";
 import { useState } from "react";
 import "./beneficios.css";
