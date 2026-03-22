@@ -93,3 +93,7 @@ O **AgroViva Web** é uma plataforma colaborativa que conecta agricultores famil
 =======
 | [![Jefferson Gomes](https://img.shields.io/badge/Jefferson_Gomes-24292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Jeffergs) | [![André Melo](https://img.shields.io/badge/André_Melo-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/andrefxm) | [![Natália Lugão](https://img.shields.io/badge/Natália_Lugão-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nalugao) | [![Gabriel Soares](https://img.shields.io/badge/Gabriel_Soares-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/GabrielSiSo) | [![Sophia Coelho]
 >>>>>>> bca53dcd1fc6b26053d4815695c95cea7205f250
+
+
+###André Melo
+- Fluxo de interação do usuário com o chatbot
