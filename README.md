@@ -88,35 +88,52 @@ O **AgroViva Web** é uma plataforma colaborativa que conecta agricultores famil
 
 | [<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/eee2b54b-385c-4ae4-b63c-3ef608634e6b" />](https://github.com/Jeffergs) | [<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/7ca56d82-e940-4076-8689-80b23b0bde23" />](https://github.com/andrefxm) | [<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/389d55a5-42f3-4731-a9f8-882c6425b416" />](https://github.com/nalugao) | [<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/f99c1d0e-ee43-4ec6-a505-23f4ae5ea91a" />](https://github.com/GabrielSiSo) | [<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/49ebc889-5dde-4ddb-ac3f-7e80dc3da88f" />](https://github.com/Sophia-Coelho) | 
 |:---:|:---:|:---:|:---:|:---:|
-<<<<<<< HEAD
-| [![Jefferson Gomes](https://img.shields.io/badge/Jefferson_Gomes-24292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Jeffergs) | [![André Melo](https://img.shields.io/badge/André_Melo-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/andrefxm) | [![Natália Lugão](https://img.shields.io/badge/Natália_Lugão-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nalugao) | [![Gabriel Soares](https://img.shields.io/badge/Gabriel_Soares-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/GabrielSiSo) | [![Sophia Coelho]
-=======
-| [![Jefferson Gomes](https://img.shields.io/badge/Jefferson_Gomes-24292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Jeffergs) | [![André Melo](https://img.shields.io/badge/André_Melo-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/andrefxm) | [![Natália Lugão](https://img.shields.io/badge/Natália_Lugão-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nalugao) | [![Gabriel Soares](https://img.shields.io/badge/Gabriel_Soares-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/GabrielSiSo) | [![Sophia Coelho]
->>>>>>> bca53dcd1fc6b26053d4815695c95cea7205f250
+| [![Jefferson Gomes](https://img.shields.io/badge/Jefferson_Gomes-24292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Jeffergs) | [![André Melo](https://img.shields.io/badge/André_Melo-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/andrefxm) | [![Natália Lugão](https://img.shields.io/badge/Natália_Lugão-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nalugao) | [![Gabriel Soares](https://img.shields.io/badge/Gabriel_Soares-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/GabrielSiSo) | [![Sophia Coelho](https://img.shields.io/badge/Sophia_Coelho-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Sophia-Coelho)  
+[![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jefferson-g-silva/) | [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/andr%C3%A9-melo-44b333a5/) | [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/natalia-lugao/) | [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-soares-1a63712bb/) | [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sophia-heringer/) |
+</div>
 
+### 📋Tarefas de cada membro da equipe
 
-### André Melo
-- Estrutura do fluxo de interação do usuário com o chatbot
-- Menu de navegação (navbar) do projeto
-- Página inicial do projeto "Home"
+<div>
+👨‍💻André Melo <br>
+&nbsp &nbsp &nbsp &nbsp ✅ Estrutura do fluxo de interação do usuário com o chatbot <br>
+&nbsp &nbsp &nbsp &nbsp ✅ Menu de navegação (navbar) do projeto <br>
+&nbsp &nbsp &nbsp &nbsp ✅ Página inicial do projeto "Home"
+</div>
 
-### Gabriel Soares
-- Design do fundo da página de benefícios
-- Design e lógica dos botões "Agricultor" e "Comunidade"
-- Inserção da logo da agroviva web como favcon do site
+<br>
 
-### Jefferson Gomes
-- Estrutura de pastas do projeto
-- Navegação entre páginas usando React-Router
-- Design e lógica dos cards de benefícios do Agricultor e da Comunidade
-- Documentação do projeto (ReadMe)
+<div>
+👨‍💻Gabriel Soares <br>
+&nbsp &nbsp &nbsp &nbsp ✅ Design do fundo da página de benefícios <br>
+&nbsp &nbsp &nbsp &nbsp ✅ Design e lógica dos botões "Agricultor" e "Comunidade" <br>
+&nbsp &nbsp &nbsp &nbsp ✅ Inserção da logo da agroviva web como favcon do site <br>
+</div>
 
-### Natalia Lugao
-- Página do chatbot
-- Ajustes na estrutura do projeto
-- Página "Impacto Social"
+<br>
 
-### Sophia Coelho
-- Página "Fale conosco"
-- Rodapé (footer) do projeto
+<div>
+👨‍💻 Jefferson Gomes <br>
+&nbsp &nbsp &nbsp &nbsp ✅ Estrutura de pastas do projeto <br>
+&nbsp &nbsp &nbsp &nbsp ✅ Navegação entre páginas usando React-Router <br>
+&nbsp &nbsp &nbsp &nbsp ✅ Design e lógica dos cards de benefícios do Agricultor e da Comunidade <br>
+&nbsp &nbsp &nbsp &nbsp ✅ Documentação do projeto (ReadMe) 
+</div>
+
+<br>
+
+<div>
+👩‍💻Natalia Lugao <br>
+&nbsp &nbsp &nbsp &nbsp ✅ Página do chatbot <br>
+&nbsp &nbsp &nbsp &nbsp ✅ Ajustes na estrutura do projeto <br>
+&nbsp &nbsp &nbsp &nbsp ✅ Página "Impacto Social" <br>
+</div>
+
+<br>
+
+<div>
+👩‍💻Sophia Coelho <br>
+&nbsp &nbsp &nbsp &nbsp ✅ Página "Fale conosco" <br>
+&nbsp &nbsp &nbsp &nbsp ✅ Rodapé (footer) do projeto
+</div>
 
