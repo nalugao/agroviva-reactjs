@@ -1,0 +1,219 @@
+/* Widget flutuante */
+.audio-reader-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  width: 280px;
+  background: #1a1f2e;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255,255,255,0.07);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #e8eaf0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  user-select: none;
+}
+.audio-reader-widget.minimized {
+  width: 200px;
+}
+
+/* Header */
+.ar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #2a3550 0%, #1e2a42 100%);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  cursor: default;
+}
+.ar-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #a8c0ff;
+}
+.ar-icon {
+  display: flex;
+  align-items: center;
+  color: #6c8fff;
+}
+
+/* Animação de onda sonora */
+.ar-wave {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 18px;
+}
+.ar-wave span {
+  display: block;
+  width: 3px;
+  background: #6c8fff;
+  border-radius: 2px;
+  animation: arWave 0.8s ease-in-out infinite;
+}
+
+.ar-wave span:nth-child(1) { height: 6px;  animation-delay: 0s; }
+.ar-wave span:nth-child(2) { height: 12px; animation-delay: 0.15s; }
+.ar-wave span:nth-child(3) { height: 9px;  animation-delay: 0.3s; }
+.ar-wave span:nth-child(4) { height: 14px; animation-delay: 0.45s; }
+
+@keyframes arWave {
+  0%, 100% { transform: scaleY(1); }
+  50%       { transform: scaleY(0.35); }
+}
+.ar-minimize-btn {
+  background: rgba(255,255,255,0.07);
+  border: none;
+  color: #8899bb;
+  cursor: pointer;
+  font-size: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+.ar-minimize-btn:hover {
+  background: rgba(255,255,255,0.14);
+  color: #e0e8ff;
+}
+
+/* Corpo do widget */
+.ar-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Barra de progresso */
+.ar-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.ar-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4d7cff, #a78bfa);
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+.ar-progress-label {
+  font-size: 10px;
+  color: #5566aa;
+  text-align: right;
+  display: block;
+  margin-top: -8px;
+}
+
+/* Botões principais */
+.ar-controls {
+  display: flex;
+  gap: 8px;
+}
+.ar-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 9px 14px;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+  flex: 1;
+  justify-content: center;
+  letter-spacing: 0.2px;
+}
+.ar-btn:active {
+  transform: scale(0.96);
+}
+.ar-btn-play {
+  background: linear-gradient(135deg, #4d7cff 0%, #6c8fff 100%);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(77, 124, 255, 0.35);
+  width: 100%;
+}
+.ar-btn-play:hover {
+  background: linear-gradient(135deg, #3d6cef 0%, #5c7fff 100%);
+  box-shadow: 0 6px 18px rgba(77, 124, 255, 0.45);
+}
+.ar-btn-pause {
+  background: rgba(255, 200, 80, 0.12);
+  color: #ffd060;
+  border: 1px solid rgba(255, 200, 80, 0.2);
+}
+.ar-btn-pause:hover {
+  background: rgba(255, 200, 80, 0.2);
+}
+.ar-btn-stop {
+  background: rgba(255, 90, 90, 0.12);
+  color: #ff7070;
+  border: 1px solid rgba(255, 90, 90, 0.2);
+}
+.ar-btn-stop:hover {
+  background: rgba(255, 90, 90, 0.22);
+}
+
+/* Controle de velocidade */
+.ar-speed {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ar-speed-label {
+  font-size: 11px;
+  color: #5566aa;
+  font-weight: 500;
+}
+.ar-speed-btns {
+  display: flex;
+  gap: 4px;
+}
+.ar-speed-btn {
+  flex: 1;
+  padding: 5px 2px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 7px;
+  background: rgba(255,255,255,0.04);
+  color: #8899bb;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.ar-speed-btn:hover {
+  background: rgba(255,255,255,0.1);
+  color: #c8d4ff;
+}
+.ar-speed-btn.active {
+  background: linear-gradient(135deg, #4d7cff22, #a78bfa22);
+  border-color: #4d7cff88;
+  color: #a0b4ff;
+}
+.audio-word-highlight {
+  background: linear-gradient(120deg, rgba(77, 124, 255, 0.18) 0%, rgba(167, 139, 250, 0.18) 100%) !important;
+  outline: 2px solid rgba(108, 143, 255, 0.45) !important;
+  border-radius: 4px !important;
+  transition: background 0.3s ease, outline 0.3s ease !important;
+  box-shadow: 0 0 0 4px rgba(77, 124, 255, 0.07) !important;
+}
+/* Responsivo — mobile */
+@media (max-width: 480px) {
+  .audio-reader-widget {
+    width: calc(100vw - 32px);
+    right: 16px;
+    bottom: 16px;
+  }
+}
