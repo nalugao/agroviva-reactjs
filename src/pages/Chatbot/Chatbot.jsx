@@ -336,7 +336,7 @@ function Chatbot() {
                                             title="Ouvir mensagem"
                                             type="button"
                                         >
-                                            📣
+                                            🔊
                                         </button>
                                     </div>
 
