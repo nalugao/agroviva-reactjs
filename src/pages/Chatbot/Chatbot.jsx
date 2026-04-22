@@ -16,6 +16,27 @@ function Chatbot() {
         return new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
     }
 
+    const speakText = useCallback((texto) => {
+        if (!texto?.trim()) return;
+
+        window.speechSynthesis.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(texto);
+        utterance.lang = "pt-BR";
+        utterance.rate = 1;
+        utterance.pitch = 1;
+        utterance.volume = 1;
+
+        const voices = window.speechSynthesis.getVoices();
+        const ptVoice = voices.find(
+            (v) => v.lang === "pt-BR" || v.lang === "pt_BR" || v.lang.startsWith("pt")
+        );
+
+        if (ptVoice) utterance.voice = ptVoice;
+
+        window.speechSynthesis.speak(utterance);
+    }, []);
+
     const addBotMessage = useCallback((text) => {
         setMessages(prev => [...prev, { from: "bot", text, time: now() }]);
     }, []);
@@ -63,6 +84,12 @@ function Chatbot() {
             });
         }
     }, [messages, isTyping]);
+
+    useEffect(() => {
+        return () => {
+            window.speechSynthesis.cancel();
+        };
+    }, []);
 
     function handleAction(opcao) {
         disableAllOptions();
@@ -158,7 +185,23 @@ function Chatbot() {
                             <div key={i} className="bubble-wrapper bot-wrapper">
                                 <div className="bot-avatar-sm">🌱</div>
                                 <div className="bubble-col">
-                                    <div className="bubble bot" dangerouslySetInnerHTML={{ __html: msg.text }} />
+                                    <div className="bubble bot-with-audio">
+                                        <div
+                                            className="bubble bot"
+                                            dangerouslySetInnerHTML={{ __html: msg.text }}
+                                        />
+                                        <button
+                                            className="audio-btn"
+                                            onClick={() =>
+                                                speakText(
+                                                    msg.text.replace(/<[^>]+>/g, '')
+                                                )
+                                            }
+                                            title="Ouvir mensagem"
+                                        >
+                                            📣
+                                        </button>
+                                    </div>
                                     <span className="timestamp">{msg.time}</span>
                                 </div>
                             </div>
@@ -181,7 +224,9 @@ function Chatbot() {
                                         key={j}
                                         className={`opt-btn${msg.disabled ? " disabled" : ""}`}
                                         onClick={() => !msg.disabled && handleAction(opt)}
+                                        onDoubleClick={() => speakText(opt)}
                                         disabled={msg.disabled}
+                                        title="Clique para selecionar / duplo clique para ouvir"
                                     >
                                         {opt}
                                     </button>

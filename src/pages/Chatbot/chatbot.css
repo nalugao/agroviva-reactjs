@@ -319,4 +319,26 @@
     .options-row {
         padding-left: 36px;
     }
+
+    .bot-with-audio {
+display: flex;
+align-items: flex-start;
+gap: 8px;
+}
+
+.audio-btn {
+background: #2e7d32;
+color: #fff;
+border: none;
+border-radius: 8px;
+padding: 6px 8px;
+cursor: pointer;
+font-size: 16px;
+transition: 0.2s;
+}
+
+.audio-btn:hover {
+background: #1b5e20;
+transform: scale(1.05);
+}
 }
