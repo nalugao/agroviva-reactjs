@@ -9,7 +9,6 @@ import Beneficios from "./pages/Beneficios/Beneficios"
 import Chatbot from "./pages/Chatbot/Chatbot";
 import FaleConosco from "./pages/FaleConosco/FaleConosco";
 import ChatBotao from './components/ChatBotao/ChatBotao';
-import AudioReader from "./components/LeitorDeAudio/AudioReader";
 
 function App() {
   return (
@@ -25,7 +24,6 @@ function App() {
       </Routes>
 
       <ChatBotao />
-      <AudioReader />
     </BrowserRouter>
   );
 }

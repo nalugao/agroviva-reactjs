@@ -1,11 +1,10 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import "./AudioReader.css";
 
-const AudioReader = () => {
+const AudioReader = ({ onClose }) => {
   const [isReading, setIsReading] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
-  const [speed, setSpeed] = useState(1);
   const [progress, setProgress] = useState(0);
   const utteranceRef = useRef(null);
   const totalCharsRef = useRef(0);
@@ -33,13 +32,11 @@ const AudioReader = () => {
     let fullText = "";
 
     elements.forEach((el) => {
-      // Detecta accordion do Bootstrap pelo data-bs-target
       const toggle = el.querySelector("[data-bs-target]");
       if (toggle) {
         const targetId = toggle.getAttribute("data-bs-target");
         const collapseEl = document.querySelector(targetId);
         if (collapseEl) {
-          // Lê pergunta + resposta mesmo com o painel fechado
           const visibleText = toggle.textContent?.trim();
           const hiddenText = collapseEl.textContent?.trim();
           const combined = visibleText + (hiddenText ? ". " + hiddenText : "");
@@ -50,7 +47,6 @@ const AudioReader = () => {
         }
       }
 
-      // Comportamento padrão para elementos normais
       const text = el.textContent.trim();
       if (!text) return;
       const start = fullText.length;
@@ -96,7 +92,7 @@ const AudioReader = () => {
 
     const utterance = new SpeechSynthesisUtterance(fullText);
     utterance.lang = "pt-BR";
-    utterance.rate = speed;
+    utterance.rate = 1;
     utterance.pitch = 1;
 
     const loadVoices = () => {
@@ -135,7 +131,7 @@ const AudioReader = () => {
     setIsReading(true);
     setIsPaused(false);
     setProgress(0);
-  }, [speed, buildTextAndMap, applyHighlight, removeHighlight]);
+  }, [buildTextAndMap, applyHighlight, removeHighlight]);
 
   const pauseResume = useCallback(() => {
     if (isPaused) {
@@ -155,17 +151,6 @@ const AudioReader = () => {
     removeHighlight();
   }, [removeHighlight]);
 
-  const changeSpeed = useCallback(
-    (newSpeed) => {
-      setSpeed(newSpeed);
-      if (isReading) {
-        stop();
-        setTimeout(() => startReading(), 150);
-      }
-    },
-    [isReading, stop, startReading]
-  );
-
   useEffect(() => {
     return () => {
       window.speechSynthesis.cancel();
@@ -183,30 +168,35 @@ const AudioReader = () => {
                 <span /><span /><span /><span />
               </span>
             ) : (
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <path d="M3 9v6h4l5 5V4L7 9H3z" fill="currentColor" />
-                <path
-                  d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"
-                  fill="currentColor"
-                  opacity="0.7"
-                />
-                <path
-                  d="M19 12c0 3.04-1.73 5.68-4.27 7l-.73-1.26C16.13 16.63 17.5 14.43 17.5 12s-1.37-3.63-3.5-4.74L14.73 6C17.27 7.32 19 9.96 19 12z"
-                  fill="currentColor"
-                  opacity="0.4"
-                />
+                <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" fill="currentColor" opacity="0.7" />
+                <path d="M19 12c0 3.04-1.73 5.68-4.27 7l-.73-1.26C16.13 16.63 17.5 14.43 17.5 12s-1.37-3.63-3.5-4.74L14.73 6C17.27 7.32 19 9.96 19 12z" fill="currentColor" opacity="0.4" />
               </svg>
             )}
           </span>
           <span>Leitor de Tela</span>
         </div>
-        <button
-          className="ar-minimize-btn"
-          onClick={() => setIsMinimized(!isMinimized)}
-          title={isMinimized ? "Expandir" : "Minimizar"}
-        >
-          {isMinimized ? "▲" : "▼"}
-        </button>
+
+        <div style={{ display: "flex", gap: "4px" }}>
+          <button
+            className="ar-minimize-btn"
+            onClick={() => setIsMinimized(!isMinimized)}
+            title={isMinimized ? "Expandir" : "Minimizar"}
+          >
+            {isMinimized ? "▲" : "▼"}
+          </button>
+
+          {onClose && (
+            <button
+              className="ar-minimize-btn"
+              onClick={() => { stop(); onClose(); }}
+              title="Fechar leitor"
+            >
+              ✕
+            </button>
+          )}
+        </div>
       </div>
 
       {!isMinimized && (
@@ -219,7 +209,7 @@ const AudioReader = () => {
           <div className="ar-controls">
             {!isReading ? (
               <button className="ar-btn ar-btn-play" onClick={startReading}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
                   <path d="M8 5v14l11-7z" fill="currentColor" />
                 </svg>
                 Ouvir página
@@ -229,14 +219,14 @@ const AudioReader = () => {
                 <button className="ar-btn ar-btn-pause" onClick={pauseResume}>
                   {isPaused ? (
                     <>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
                         <path d="M8 5v14l11-7z" fill="currentColor" />
                       </svg>
                       Continuar
                     </>
                   ) : (
                     <>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
                         <rect x="6" y="4" width="4" height="16" fill="currentColor" />
                         <rect x="14" y="4" width="4" height="16" fill="currentColor" />
                       </svg>
@@ -245,28 +235,13 @@ const AudioReader = () => {
                   )}
                 </button>
                 <button className="ar-btn ar-btn-stop" onClick={stop}>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
                     <rect x="4" y="4" width="16" height="16" fill="currentColor" />
                   </svg>
                   Parar
                 </button>
               </>
             )}
-          </div>
-
-          <div className="ar-speed">
-            <span className="ar-speed-label">Velocidade:</span>
-            <div className="ar-speed-btns">
-              {[0.75, 1, 1.25, 1.5, 2].map((s) => (
-                <button
-                  key={s}
-                  className={`ar-speed-btn ${speed === s ? "active" : ""}`}
-                  onClick={() => changeSpeed(s)}
-                >
-                  {s}x
-                </button>
-              ))}
-            </div>
           </div>
         </div>
       )}
