@@ -320,7 +320,8 @@
         padding-left: 36px;
     }
 
-    .bot-with-audio {
+.bot-with-audio,
+.user-with-audio {
 display: flex;
 align-items: flex-start;
 gap: 8px;
@@ -330,15 +331,74 @@ gap: 8px;
 background: #2e7d32;
 color: #fff;
 border: none;
-border-radius: 8px;
-padding: 6px 8px;
+border-radius: 10px;
+padding: 6px 9px;
 cursor: pointer;
-font-size: 16px;
-transition: 0.2s;
+font-size: 15px;
+line-height: 1;
+transition: 0.2s ease;
+display: flex;
+align-items: center;
+justify-content: center;
+min-width: 36px;
+min-height: 36px;
 }
 
 .audio-btn:hover {
 background: #1b5e20;
 transform: scale(1.05);
+}
+
+.audio-btn:disabled {
+opacity: 0.5;
+cursor: not-allowed;
+transform: none;
+}
+
+.option-item {
+display: flex;
+align-items: center;
+gap: 6px;
+}
+
+.chat-toolbar {
+display: flex;
+justify-content: flex-end;
+padding: 10px 14px 0;
+}
+
+.toolbar-btn {
+background: #c62828;
+color: #fff;
+border: none;
+border-radius: 10px;
+padding: 8px 12px;
+cursor: pointer;
+font-size: 14px;
+transition: 0.2s ease;
+}
+
+.toolbar-btn:hover {
+background: #a61f1f;
+}
+
+.toolbar-btn.disabled,
+.toolbar-btn:disabled {
+opacity: 0.5;
+cursor: not-allowed;
+}
+
+.option-audio-btn {
+min-width: 34px;
+min-height: 34px;
+font-size: 14px;
+}
+
+.user-audio-btn {
+background: #1565c0;
+}
+
+.user-audio-btn:hover {
+background: #0d47a1;
 }
 }
