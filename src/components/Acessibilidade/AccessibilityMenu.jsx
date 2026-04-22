@@ -42,7 +42,7 @@ const AccessibilityMenu = () => {
     <>
       {audioAtivo && <AudioReader onClose={() => setAudioAtivo(false)} />}
 
-      <div style={{ position: "fixed", bottom: "200px", right: "24px", zIndex: 9999, display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "10px" }}>
+      <div style={{ position: "fixed", bottom: "130px", right: "54px", zIndex: 9999, display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "10px" }}>
 
         {isOpen && items.map((item, index) => (
           <div key={index} style={{ display: "flex", alignItems: "center", gap: "10px" }}>

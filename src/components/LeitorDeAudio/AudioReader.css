@@ -1,8 +1,8 @@
 /* Widget flutuante */
 .audio-reader-widget {
   position: fixed;
-  bottom: 24px;
-  right: 100px;
+  bottom: 120px;
+  right: 130px;
   z-index: 9998;
   width: 210px;
   background: #1a1f2e;
