@@ -59,15 +59,11 @@ function Chatbot() {
         loadVoices();
         window.speechSynthesis.onvoiceschanged = loadVoices;
 
-        utterance.onstart = () => {
-            setIsSpeaking(true);
-        };
-
+        utterance.onstart = () => setIsSpeaking(true);
         utterance.onend = () => {
             setIsSpeaking(false);
             utteranceRef.current = null;
         };
-
         utterance.onerror = () => {
             setIsSpeaking(false);
             utteranceRef.current = null;
@@ -79,11 +75,8 @@ function Chatbot() {
 
     const addBotMessage = useCallback((text, autoSpeak = false) => {
         setMessages(prev => [...prev, { from: "bot", text, time: now() }]);
-
         if (autoSpeak) {
-            setTimeout(() => {
-                speakText(text);
-            }, 250);
+            setTimeout(() => speakText(text), 250);
         }
     }, [speakText]);
 
@@ -105,9 +98,7 @@ function Chatbot() {
 
             if (autoSpeak) {
                 const optionsText = opts?.length ? `. Opções disponíveis: ${opts.join(", ")}.` : "";
-                setTimeout(() => {
-                    speakText(`${text}${optionsText}`);
-                }, 250);
+                setTimeout(() => speakText(`${text}${optionsText}`), 250);
             }
         }, delay);
     }, [speakText]);
@@ -148,9 +139,7 @@ function Chatbot() {
     }, [messages, isTyping]);
 
     useEffect(() => {
-        return () => {
-            window.speechSynthesis.cancel();
-        };
+        return () => window.speechSynthesis.cancel();
     }, []);
 
     function handleAction(opcao) {
@@ -208,9 +197,7 @@ function Chatbot() {
                     { from: "bot", text: item.resposta, time: now() }
                 ]);
 
-                setTimeout(() => {
-                    speakText(item.resposta);
-                }, 250);
+                setTimeout(() => speakText(item.resposta), 250);
 
                 setTimeout(() => {
                     addBotMessageWithOptions(
@@ -234,28 +221,14 @@ function Chatbot() {
         if (step === "navegacao") {
             if (opcao === "Ver outras perguntas") {
                 const perguntas = chatbotQuestionario[perfil][categoria].map(p => p.pergunta);
-
-                addBotMessageWithOptions(
-                    "Escolha uma pergunta:",
-                    perguntas,
-                    700,
-                    true
-                );
-
+                addBotMessageWithOptions("Escolha uma pergunta:", perguntas, 700, true);
                 setStep("pergunta");
                 return;
             }
 
             if (opcao === "Ver categorias") {
                 const categorias = Object.keys(chatbotQuestionario[perfil]);
-
-                addBotMessageWithOptions(
-                    "Escolha uma categoria:",
-                    categorias,
-                    700,
-                    true
-                );
-
+                addBotMessageWithOptions("Escolha uma categoria:", categorias, 700, true);
                 setStep("categoria");
                 return;
             }
@@ -267,14 +240,12 @@ function Chatbot() {
                     700,
                     true
                 );
-
                 setStep("perfil");
                 return;
             }
 
             if (opcao === "Encerrar") {
                 setIsTyping(true);
-
                 setTimeout(() => {
                     setIsTyping(false);
                     addBotMessage(
@@ -292,12 +263,10 @@ function Chatbot() {
 
                 <div className="header_chat">
                     <div className="header_avatar">🌱</div>
-
                     <div className="header_texto">
                         <h1>VivaChat</h1>
                         <p>Assistente virtual da AgroViva</p>
                     </div>
-
                     <div className="viva-status">
                         <span className="dot-online" />
                         Online agora
@@ -312,7 +281,7 @@ function Chatbot() {
                         type="button"
                         title="Parar leitura"
                     >
-                        ⏹ Parar áudio
+                         Parar áudio
                     </button>
                 </div>
 
@@ -322,14 +291,12 @@ function Chatbot() {
                         if (msg.from === "bot") return (
                             <div key={i} className="bubble-wrapper bot-wrapper">
                                 <div className="bot-avatar-sm">🌱</div>
-
                                 <div className="bubble-col">
                                     <div className="bot-with-audio">
                                         <div
                                             className="bubble bot"
                                             dangerouslySetInnerHTML={{ __html: msg.text }}
                                         />
-
                                         <button
                                             className="audio-btn"
                                             onClick={() => speakText(msg.text)}
@@ -339,7 +306,6 @@ function Chatbot() {
                                             🔊
                                         </button>
                                     </div>
-
                                     <span className="timestamp">{msg.time}</span>
                                 </div>
                             </div>
@@ -349,6 +315,7 @@ function Chatbot() {
                             <div key={i} className="bubble-wrapper user-wrapper">
                                 <div className="bubble-col align-end">
                                     <div className="user-with-audio">
+                                        
                                         <button
                                             className="audio-btn user-audio-btn"
                                             onClick={() => speakText(msg.text)}
@@ -357,13 +324,10 @@ function Chatbot() {
                                         >
                                             🔊
                                         </button>
-
                                         <div className="bubble user">{msg.text}</div>
                                     </div>
-
                                     <span className="timestamp">{msg.time}</span>
                                 </div>
-
                                 <div className="user-avatar-sm">🧑‍🌾</div>
                             </div>
                         );
@@ -380,7 +344,6 @@ function Chatbot() {
                                         >
                                             {opt}
                                         </button>
-
                                         <button
                                             className="audio-btn option-audio-btn"
                                             onClick={() => speakText(opt)}
