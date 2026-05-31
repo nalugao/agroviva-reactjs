@@ -1,0 +1,778 @@
+.as-section-wrapper {
+    --as-verde-escuro: #2d5a27;
+    --as-verde-medio: #4a8c3f;
+    --as-verde-claro: #8ab87f;
+    --as-creme: #f5f0e8;
+    --as-creme-escuro: #ede7d9;
+    --as-terra: #c4843a;
+    --as-terra-suave: #e8d5b7;
+    --as-branco: #fefcf8;
+    --as-texto: #2d2d2d;
+    --as-muted: #6b7a5e;
+    --as-borda: rgba(138, 184, 127, 0.30);
+    --as-borda-forte: rgba(74, 140, 63, 0.40);
+    --as-sombra: 0 4px 24px rgba(45, 90, 39, 0.10);
+    --as-radius: 16px;
+    --as-transicao: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes as-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes as-fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.as-section-wrapper {
+    padding: 48px 0 56px;
+}
+
+.as-section-intro {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.as-section-intro__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(138, 184, 127, 0.22);
+    color: var(--as-verde-escuro);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 99px;
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+    border: 1px solid var(--as-borda);
+}
+
+.as-section-intro__title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--as-verde-escuro);
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.as-section-intro__desc {
+    font-size: 15px;
+    color: rgba(33, 37, 41, 0.75);
+    max-width: 560px;
+    line-height: 1.6;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.as-root {
+    font-family: inherit;
+    background: var(--as-branco);
+    border-radius: var(--as-radius);
+    overflow: hidden;
+    border: 1px solid var(--as-borda);
+    box-shadow: var(--as-sombra);
+    width: 100%;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+}
+
+.as-header {
+    background: var(--as-verde-escuro);
+    padding: 0 20px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.as-header__logo {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.as-header__icon {
+    font-size: 17px;
+    line-height: 1;
+}
+
+.as-header__title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0.05em;
+}
+
+.as-header__sub {
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.as-header__meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.as-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 3px 10px;
+    border-radius: 99px;
+}
+
+.as-stat__num {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.as-stat__label {
+    font-size: 14px;
+    color: #fff;
+}
+
+.as-env-tag {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.40);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-family: monospace;
+    letter-spacing: 0.03em;
+}
+
+.as-body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    min-height: 0;
+}
+
+.as-mapa-col {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+    background: var(--as-creme);
+    min-width: 0;
+}
+
+.as-mapa-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+}
+
+.as-mapa-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.as-mapa-svg path {
+    transition: fill 0.15s ease, stroke 0.15s ease, opacity 0.15s ease;
+}
+
+.as-mapa-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+    gap: 12px;
+}
+
+.as-spinner {
+    width: 28px;
+    height: 28px;
+    border: 3px solid var(--as-borda);
+    border-top-color: var(--as-verde-medio);
+    border-radius: 50%;
+    animation: as-spin 0.8s linear infinite;
+}
+
+.as-spinner--small {
+    width: 14px;
+    height: 14px;
+    border-width: 2px;
+}
+
+.as-loading-text {
+    font-size: 13px;
+    color: var(--as-muted);
+}
+
+.as-tooltip {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    background: var(--as-branco);
+    border: 1px solid var(--as-borda);
+    border-left-width: 3px;
+    border-radius: 10px;
+    padding: 9px 13px;
+    pointer-events: none;
+    box-shadow: var(--as-sombra);
+    min-width: 170px;
+    z-index: 10;
+    animation: as-fadeSlide 0.12s ease;
+}
+
+.as-tooltip[data-sev="Perigo"] {
+    border-left-color: #E74C3C;
+}
+
+.as-tooltip[data-sev="Alerta Severo"] {
+    border-left-color: #c4843a;
+}
+
+.as-tooltip[data-sev="Alerta"] {
+    border-left-color: #d4a017;
+}
+
+.as-tooltip[data-sev="Atenção"] {
+    border-left-color: #4a8c3f;
+}
+
+.as-tooltip[data-sev="vazio"] {
+    border-left-color: var(--as-borda-forte);
+}
+
+.as-tooltip__estado {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--as-verde-escuro);
+    margin-bottom: 4px;
+}
+
+.as-tooltip__sigla {
+    font-weight: 400;
+    color: var(--as-muted);
+    font-size: 11px;
+}
+
+.as-tooltip__badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 99px;
+    margin-bottom: 3px;
+}
+
+.as-tooltip__badge[data-sev="Perigo"] {
+    background: #FADBD8;
+    color: #C0392B;
+}
+
+.as-tooltip__badge[data-sev="Alerta Severo"] {
+    background: #faecd6;
+    color: #a0621a;
+}
+
+.as-tooltip__badge[data-sev="Alerta"] {
+    background: #fdf6d8;
+    color: #8a6800;
+}
+
+.as-tooltip__badge[data-sev="Atenção"] {
+    background: rgba(138, 184, 127, 0.25);
+    color: #2d5a27;
+}
+
+.as-tooltip__dica {
+    font-size: 10px;
+    color: var(--as-muted);
+    margin-top: 2px;
+}
+
+.as-tooltip__vazio {
+    font-size: 11px;
+    color: var(--as-muted);
+}
+
+.as-legenda {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: var(--as-branco);
+    border: 1px solid var(--as-borda);
+    border-radius: 10px;
+    padding: 8px 11px;
+    box-shadow: var(--as-sombra);
+}
+
+.as-legenda__title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--as-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+}
+
+.as-legenda__item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    padding: 1px 0;
+    transition: opacity 0.15s;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.as-legenda__item:last-child {
+    margin-bottom: 0;
+    cursor: default;
+}
+
+.as-legenda__item--inativo {
+    opacity: 0.3;
+}
+
+.as-legenda__dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.as-legenda__dot[data-sev="Perigo"] {
+    background: #C0392B;
+}
+
+.as-legenda__dot[data-sev="Alerta Severo"] {
+    background: #c4843a;
+}
+
+.as-legenda__dot[data-sev="Alerta"] {
+    background: #d4a017;
+}
+
+.as-legenda__dot[data-sev="Atenção"] {
+    background: #4a8c3f;
+}
+
+.as-legenda__dot[data-sev="Observação"] {
+    background: #2d5a27;
+}
+
+.as-legenda__dot[data-sev="vazio"] {
+    background: var(--as-creme-escuro);
+    border: 1px solid var(--as-borda-forte);
+}
+
+.as-legenda__label {
+    font-size: 11px;
+    color: var(--as-texto);
+}
+
+.as-painel-col {
+    width: 290px;
+    flex-shrink: 0;
+    border-left: 1px solid var(--as-borda);
+    background: var(--as-branco);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.as-painel__header {
+    padding: 14px 16px 11px;
+    border-bottom: 1px solid var(--as-borda);
+    background: var(--as-branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.as-painel__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--as-verde-escuro);
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.as-painel__sigla {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--as-verde-escuro);
+    letter-spacing: -0.02em;
+}
+
+.as-painel__sub {
+    font-size: 11px;
+    color: var(--as-muted);
+    margin-top: 2px;
+}
+
+.as-painel__actions {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.as-icon-btn {
+    background: none;
+    border: 1px solid var(--as-borda);
+    border-radius: 6px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--as-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--as-transicao);
+}
+
+.as-icon-btn:hover {
+    background: rgba(138, 184, 127, 0.15);
+    color: var(--as-verde-escuro);
+    border-color: var(--as-borda-forte);
+}
+
+.as-icon-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.as-icon-btn__spin {
+    display: inline-block;
+    animation: as-spin 0.7s linear infinite;
+}
+
+.as-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 9px 16px;
+    border-bottom: 1px solid var(--as-borda);
+    flex-shrink: 0;
+}
+
+.as-chip {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 9px;
+    border-radius: 99px;
+    font-size: 11px;
+    border: 1px solid transparent;
+}
+
+.as-chip[data-sev="Perigo"] {
+    background: #FADBD8;
+    color: #C0392B;
+    border-color: #f1998f;
+}
+
+.as-chip[data-sev="Alerta Severo"] {
+    background: #faecd6;
+    color: #a0621a;
+    border-color: #dba86a;
+}
+
+.as-chip[data-sev="Alerta"] {
+    background: #fdf6d8;
+    color: #8a6800;
+    border-color: #d4bf60;
+}
+
+.as-chip[data-sev="Atenção"] {
+    background: rgba(138, 184, 127, 0.20);
+    color: #2d5a27;
+    border-color: rgba(74, 140, 63, 0.35);
+}
+
+.as-chip__num {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.as-total {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--as-borda);
+    flex-shrink: 0;
+}
+
+.as-total__num {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--as-verde-escuro);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.as-total__label {
+    font-size: 11px;
+    color: var(--as-muted);
+    margin-top: 2px;
+}
+
+.as-lista {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    min-height: 0;
+    background: var(--as-creme);
+}
+
+.as-lista::-webkit-scrollbar {
+    width: 3px;
+}
+
+.as-lista::-webkit-scrollbar-thumb {
+    background: var(--as-verde-claro);
+    border-radius: 99px;
+}
+
+.as-card {
+    background: var(--as-branco);
+    border-radius: 0 10px 10px 0;
+    border: 1px solid var(--as-borda);
+    border-left-width: 3px;
+    padding: 10px 12px;
+    margin-bottom: 7px;
+    cursor: pointer;
+    transition: var(--as-transicao);
+    animation: as-fadeSlide 0.18s ease;
+}
+
+.as-card:hover {
+    box-shadow: 0 2px 12px rgba(45, 90, 39, 0.10);
+    transform: translateX(2px);
+}
+
+.as-card[data-sev="Perigo"] {
+    border-left-color: #C0392B;
+}
+
+.as-card[data-sev="Alerta Severo"] {
+    border-left-color: #c4843a;
+}
+
+.as-card[data-sev="Alerta"] {
+    border-left-color: #d4a017;
+}
+
+.as-card[data-sev="Atenção"] {
+    border-left-color: #4a8c3f;
+}
+
+.as-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.as-card__evento {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--as-verde-escuro);
+    flex: 1;
+    line-height: 1.4;
+}
+
+.as-card__badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 99px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.as-card__badge[data-sev="Perigo"] {
+    background: #FADBD8;
+    color: #C0392B;
+}
+
+.as-card__badge[data-sev="Alerta Severo"] {
+    background: #faecd6;
+    color: #a0621a;
+}
+
+.as-card__badge[data-sev="Alerta"] {
+    background: #fdf6d8;
+    color: #8a6800;
+}
+
+.as-card__badge[data-sev="Atenção"] {
+    background: rgba(138, 184, 127, 0.22);
+    color: #2d5a27;
+}
+
+.as-card__meta {
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--as-muted);
+    flex-wrap: wrap;
+}
+
+.as-card__body {
+    margin-top: 8px;
+    border-top: 1px solid var(--as-borda);
+    padding-top: 7px;
+    animation: as-fadeSlide 0.15s ease;
+}
+
+.as-card__desc {
+    font-size: 14px;
+    color: var(--as-texto);
+    line-height: 1.55;
+    margin-bottom: 5px;
+}
+
+.as-card__munis {
+    font-size: 13px;
+    color: var(--as-muted);
+}
+
+.as-card__toggle {
+    font-size: 12px;
+    color: var(--as-verde-claro);
+    text-align: right;
+    margin-top: 4px;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+}
+
+.as-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+    gap: 10px;
+    text-align: center;
+    height: 100%;
+}
+
+.as-empty__icon {
+    font-size: 30px;
+    line-height: 1;
+    color: var(--as-verde-claro);
+}
+
+.as-empty__text {
+    font-size: 13px;
+    color: var(--as-muted);
+    line-height: 1.5;
+}
+
+.as-instrucao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    gap: 12px;
+    height: 100%;
+}
+
+.as-instrucao__icon {
+    font-size: 26px;
+    color: var(--as-verde-claro);
+}
+
+.as-instrucao__text {
+    font-size: 12px;
+    color: var(--as-muted);
+    text-align: center;
+    line-height: 1.6;
+}
+
+.as-rodape {
+    font-size: 12px;
+    color: var(--as-muted);
+    text-align: center;
+    margin-top: 12px;
+}
+
+.as-estado {
+    cursor: default;
+}
+
+.as-estado--ativo {
+    cursor: pointer;
+}
+
+.as-estado__label {
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (max-width: 700px) {
+    .as-section-wrapper {
+        padding: 32px 0 40px;
+    }
+
+
+    .as-root {
+        height: auto;
+        min-height: 600px;
+        border-radius: 12px;
+    }
+
+    .as-body {
+        flex-direction: column;
+        overflow: visible;
+    }
+
+    .as-mapa-col {
+        padding: 12px;
+        height: 300px;
+        flex: none;
+    }
+
+    .as-painel-col {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid var(--as-borda);
+        max-height: 320px;
+    }
+
+    .as-legenda {
+        bottom: 8px;
+        right: 8px;
+    }
+
+    .as-header__meta .as-env-tag {
+        display: none;
+    }
+}
