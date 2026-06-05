@@ -4,9 +4,32 @@ import { useBrasilGeo, projectFeatures } from "../../hooks/useBrasilGeo";
 const W = 560;
 const H = 520;
 
+const COR_MAPA = {
+  "Perigo":        "#C0392B",
+  "Alerta Severo": "#c4843a",
+  "Alerta":        "#d4a017",
+  "Atenção":       "#4a8c3f",
+  "Observação":    "#2d5a27",
+};
+
+const COR_BORDA = {
+  "Perigo":        "#9b2b20",
+  "Alerta Severo": "#9e6420",
+  "Alerta":        "#a07d10",
+  "Atenção":       "#2d5a27",
+  "Observação":    "#1a3a16",
+};
+
+// Detecta se é dispositivo touch para desativar tooltip hover
+function useIsTouch() {
+  return typeof window !== "undefined" &&
+    window.matchMedia("(hover: none)").matches;
+}
+
 export default function MapaSVG({ alertasPorEstado, estadoSelecionado, onEstadoClick }) {
   const { features, loading } = useBrasilGeo();
   const [hovered, setHovered] = useState(null);
+  const isTouch = useIsTouch();
 
   const projected = useMemo(
     () => projectFeatures(features, W, H, 16),
@@ -30,31 +53,12 @@ export default function MapaSVG({ alertasPorEstado, estadoSelecionado, onEstadoC
     return "8.5";
   };
 
-  // SVG não suporta className para fill/stroke — atributos de apresentação são obrigatórios aqui.
-  // Cores vêm do SEVERIDADE_CONFIG (dados), não de lógica de estilo arbitrária.
   const getPathAtrs = (sigla) => {
     const dados = alertasPorEstado[sigla];
     const sev = dados?.severidadeMax;
     const isSelected = estadoSelecionado === sigla;
     const isHovered  = hovered === sigla;
     const temAlerta  = !!dados;
-
-    // Paleta harmoniosa com a home: vermelho / terra / âmbar / verde
-    const COR_MAPA = {
-      "Perigo":        "#C0392B",
-      "Alerta Severo": "#c4843a",
-      "Alerta":        "#d4a017",
-      "Atenção":       "#4a8c3f",
-      "Observação":    "#2d5a27",
-    };
-
-    const COR_BORDA = {
-      "Perigo":        "#9b2b20",
-      "Alerta Severo": "#9e6420",
-      "Alerta":        "#a07d10",
-      "Atenção":       "#2d5a27",
-      "Observação":    "#1a3a16",
-    };
 
     return {
       fill:        temAlerta ? (COR_MAPA[sev] ?? "#8ab87f") : "#e8dfc8",
@@ -64,6 +68,9 @@ export default function MapaSVG({ alertasPorEstado, estadoSelecionado, onEstadoC
       filter:      isSelected ? "url(#as-shadow)" : undefined,
     };
   };
+
+  const tooltipDados = hovered ? alertasPorEstado[hovered] : null;
+  const tooltipNome  = hovered ? projected.find((p) => p.sigla === hovered)?.nome : null;
 
   return (
     <div className="as-mapa-wrap">
@@ -89,13 +96,11 @@ export default function MapaSVG({ alertasPorEstado, estadoSelecionado, onEstadoC
             <g
               key={sigla}
               onClick={() => onEstadoClick(sigla)}
-              onMouseEnter={() => setHovered(sigla)}
-              onMouseLeave={() => setHovered(null)}
+              onMouseEnter={() => !isTouch && setHovered(sigla)}
+              onMouseLeave={() => !isTouch && setHovered(null)}
               className={temAlerta ? "as-estado as-estado--ativo" : "as-estado"}
               aria-label={`${sigla}${sev ? `: ${sev}` : ""}`}
             >
-              {/* fill/stroke são atributos de apresentação SVG — não existe equivalente CSS puro
-                  para valores calculados a partir de dados dinâmicos (cor de cada estado). */}
               <path
                 d={d}
                 fill={atr.fill}
@@ -137,11 +142,12 @@ export default function MapaSVG({ alertasPorEstado, estadoSelecionado, onEstadoC
         })}
       </svg>
 
-      {hovered && (
+      {/* Tooltip — só aparece em dispositivos com hover (desktop) */}
+      {!isTouch && hovered && (
         <Tooltip
           sigla={hovered}
-          nome={projected.find((p) => p.sigla === hovered)?.nome}
-          dados={alertasPorEstado[hovered]}
+          nome={tooltipNome}
+          dados={tooltipDados}
         />
       )}
     </div>

@@ -96,9 +96,9 @@ export default function PainelAlertas({
           </div>
         ) : !estadoSelecionado ? (
           <div className="as-instrucao">
-            <span className="as-instrucao__icon">↙</span>
+            <span className="as-instrucao__icon">🗺</span>
             <p className="as-instrucao__text">
-              Clique em um estado no mapa para ver os alertas detalhados
+              Toque em um estado no mapa para ver os alertas detalhados
             </p>
           </div>
         ) : alertas.length === 0 ? (
