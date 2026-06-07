@@ -124,7 +124,7 @@ function Home() {
 
                             <div className="col-md-6">
                                 <h4 className="mb-3">
-                                    Entenda as funcionalidades{" "}
+                                    Conheça nosso projeto{" "}
                                     <a
                                         href="https://www.youtube.com/watch?v=LI3EE8RoYGo"
                                         target="_blank"
