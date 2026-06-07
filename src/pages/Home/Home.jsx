@@ -3,7 +3,7 @@ import "./styles.css";
 import missao from "../../assets/missao.png";
 import agricultor from "../../assets/agricultor1.png";
 import comunidade from "../../assets/comunidade.png";
-import video1 from "../../assets/PITCH-FEATURES.mp4";
+import video1 from "../../assets/agroviva7.mp4";
 import video2 from "../../assets/PITCH-VIDEO.mp4";
 import bg from "../../assets/imagem-fundo.png";
 import AlertasSection from "../../components/AlertasSection/AlertasSection";
@@ -126,7 +126,7 @@ function Home() {
                                 <h4 className="mb-3">
                                     Entenda as funcionalidades{" "}
                                     <a
-                                        href="https://www.youtube.com/watch?v=Tvkzpwii_YM"
+                                        href="https://www.youtube.com/watch?v=LI3EE8RoYGo"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
