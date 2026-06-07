@@ -118,7 +118,7 @@ function Home() {
                                 </h4>
 
                                 <div className="ratio ratio-16x9">
-                                    <video src={video1} controls />
+                                    <video src={video2} controls />
                                 </div>
                             </div>
 
@@ -135,7 +135,7 @@ function Home() {
                                 </h4>
 
                                 <div className="ratio ratio-16x9">
-                                    <video src={video2} controls />
+                                    <video src={video1} controls />
                                 </div>
                             </div>
                         </div>
